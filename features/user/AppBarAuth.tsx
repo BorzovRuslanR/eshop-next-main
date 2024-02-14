@@ -1,14 +1,15 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { signIn } from 'next-auth/react';
 import React from 'react'
 
 
 export default function AppBarAuth() {
   return (
     <div className='flex gap-4'>
-        <Button>Login</Button>
-        <Button>Sing Up</Button>
+        <Button onClick={() => signIn()}>Login</Button>
+        <Button onClick={() => signIn()}>Sing Up</Button>
     </div>
   )
 }
