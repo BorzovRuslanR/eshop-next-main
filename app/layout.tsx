@@ -2,7 +2,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { ThemeProvider } from '@/components/theme-provider'
+import AppBar from '@/components/AppBar'
+import Providers from '@/components/Providers'
 
 
 
@@ -21,14 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-      </ThemeProvider>
+      <Providers>
+           <AppBar />
+          <main className="">{children}</main>  
+      </Providers>
       </body>
     </html>
   )
