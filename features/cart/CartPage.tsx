@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function CartPage() {
 
-    const { data: products, isLoading } = useQuery<Product[]>({
+    const { data: products, isLoading } = useQuery<{data: Product[]}>({
         queryKey: ['product'],
         queryFn: () => {
             return fetch('/api/product').then(res => res.json());
@@ -16,7 +16,14 @@ export default function CartPage() {
     if (!products) return <div>Load error</div>
   return (
     <div>
-        <h2>Cart</h2>
+        <h2>Products</h2>
+        <ul>
+            {
+                products.data.map((product) => {
+                    return <li key={product.id}>{product.name}</li>
+                })
+            }
+        </ul>
     </div>
   )
 }
