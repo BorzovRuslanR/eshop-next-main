@@ -9,6 +9,7 @@ import React from 'react'
 export default function AppBarAuth() {
   const session = useSession();
   console.log(session)
+  console.log('dev!')
   return (
     <div className='flex gap-4'>
         <ThemeToggler />
