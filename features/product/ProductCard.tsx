@@ -10,7 +10,7 @@ type Props = {
 
 export default function ProductCard({product}: Props) {
   return (
-    <Card className="" key={product.id}>
+    <Card className="dark:hover:bg-sky-700 hover:bg-emerald-300 transition-transform hover:-translate-y-1" key={product.id}>
               <CardHeader>
                 <CardTitle>{product.name}</CardTitle>
                 <CardDescription>{product.desc}</CardDescription>
