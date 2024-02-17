@@ -3,6 +3,8 @@ import React from 'react'
 
 export default function CartPageApp() {
   return (
-    <CartPage />
+    <div className="bg-gray-100">
+      <CartPage />
+    </div>
   )
 }

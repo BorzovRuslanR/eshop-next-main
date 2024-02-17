@@ -46,7 +46,7 @@ export default function AppBarAuth() {
               <DropdownMenuSeparator />
               <DropdownMenuItem><Link href={'/profile'}>Profile</Link></DropdownMenuItem>
               <DropdownMenuItem><Link href={'/cart'}>Cart</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href={'/order'}>Orders</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href={'/orders'}>Orders</Link></DropdownMenuItem>
               <DropdownMenuItem><Link href={'/favorites'}>Favorites</Link></DropdownMenuItem>
               <DropdownMenuItem onClick={() => signOut()}>Logout</DropdownMenuItem>
             </DropdownMenuContent>

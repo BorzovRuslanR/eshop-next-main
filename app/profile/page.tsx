@@ -1,7 +1,13 @@
 import React from 'react'
+import ProfilePage from '@/features/user/ProfilePage'
 
-export default function ProfilePage() {
+export default function ProfilePageApp() {
+
+
+  
   return (
-    <div>Profile page</div>
+    <div>
+      <ProfilePage userId={''} />
+    </div>
   )
 }
