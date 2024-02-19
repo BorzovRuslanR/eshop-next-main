@@ -1,7 +1,9 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
 import { Product } from '@prisma/client';
 import { useQuery } from '@tanstack/react-query'
+import { Trash2 } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react'
 
@@ -38,11 +40,17 @@ export default function CartPage() {
                   <h3 className="text-lg font-semibold">{product.name}</h3>
                   <p className="text-gray-500">{product.desc}</p>
                 </div>
-                <p className="text-gray-500">${product.price}</p>
+                <p className="text-gray-500 p-4">${product.price}</p>
+                <Button size={'icon'} variant={'destructive'}><Trash2/></Button>
               </li>
             );
           })}
         </ul>
+        <div className="flex justify-end mt-4">
+          <span className="font-bold text-gray-600 text-2xl mr-2">Total:</span>
+          <span className="font-bold text-2xl text-gray-900 px-4">$100,000</span>
+          <Button size={'lg'} variant={'submit'}>Заказать</Button>
+        </div>
       </div>
     );
 }

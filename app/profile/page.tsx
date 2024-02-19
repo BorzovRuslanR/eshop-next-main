@@ -7,7 +7,7 @@ export default function ProfilePageApp() {
   
   return (
     <div>
-      <ProfilePage userId={''} />
+      <ProfilePage />
     </div>
   )
 }
