@@ -4,6 +4,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import AppBar from '@/components/AppBar'
 import Providers from '@/components/Providers'
+import Footer from '@/features/footer/Footer'
+import ScrollToTop from '@/features/scrollToTop/ScrollToTop'
 
 
 
@@ -26,6 +28,8 @@ export default function RootLayout({
            <AppBar />
           <main className="container py-6">{children}</main>  
       </Providers>
+      <Footer />
+      <ScrollToTop />
       </body>
     </html>
   )
