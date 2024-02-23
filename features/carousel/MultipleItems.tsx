@@ -25,18 +25,21 @@ class MultipleItems extends React.Component<Props> {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 4000,
       slidesToShow: 3,
       slidesToScroll: 3,
       focusOnSelect: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      cssEase: "linear"
     };
 
     return (
-      <div className="w-auto h-auto mx-auto">
+      <div className="w-auto h-auto mx-auto mt-6">
       <Slider {...settings} className="p-2 overflow-hidden">
         {imageUrls.map((imageUrl, index) => (
-          <div key={index} className="px-4 m-10 relative">
-            <div className="w-full h-0 pb-[75%] relative">
+          <div key={index} className="px-2 mt-20 relative">
+            <div className="w-full h-0 pb-[90%] relative">
               <Image
                 src={imageUrl}
                 alt={`Slide ${index + 1}`}
