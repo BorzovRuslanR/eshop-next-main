@@ -16,7 +16,12 @@ export default function ProductCard({product}: Props) {
                 <CardDescription>{product.desc}</CardDescription>
               </CardHeader>
               <CardContent>
-                <Image src={product.img} alt={product.name} width={400} height={500}/>
+                <Image
+                 src={product.img} 
+                 alt={product.name} 
+                 width={400} 
+                 height={500}
+                 />
               </CardContent>
               <CardContent>{product.price}$</CardContent>
               <CardFooter className="flex justify-between">
