@@ -7,7 +7,7 @@ import Image from 'next/image'
 export default function AppBar() {
   return (
     <header className='flex gap-4 justify-between items-center h-16 py-2 shadow-md
-     shadow-slate-600 dark:shadow-slate-100 px-10 fixed w-full bg-slate-100 z-[50] overflow-hidden max-h-full'>
+     shadow-slate-600 dark:shadow-slate-500 px-10 fixed w-full bg-slate-100 z-[50] overflow-hidden max-h-full'>
         <div className='flex justify-between items-center container'>
           <div className='pr-10'>
             <Link href={'/'}>
