@@ -8,7 +8,7 @@ export default function AppBar() {
   return (
     <header className='flex gap-4 justify-between items-center h-16 py-2 shadow-md
      shadow-slate-600 dark:shadow-slate-500 px-10 fixed w-full bg-slate-100 z-[50] overflow-hidden max-h-full'>
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center gap-96'>
           <div className='pr-10'>
             <Link href={'/'}>
               <Image
@@ -19,20 +19,22 @@ export default function AppBar() {
               />
             </Link>
           </div>
-          <nav className="flex gap-4">
-            <div className='bg-sky-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-32 flex items-center justify-center'>
-              <Link href="/" className="">Main page</Link>
-            </div>
-            <div className="bg-sky-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-32 flex items-center justify-center">
-              <Link href={'/catalog'}>Catalog</Link>
-            </div>
-            <div className="bg-sky-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-32 flex items-center justify-center">
-              <Link href={'/contact'}>Contact</Link>
-            </div>
-            <div className="bg-sky-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-32 flex items-center justify-center">
-              <Link href={'/about'}>About</Link>
-            </div>
-          </nav>
+          <div>
+            <nav className="flex gap-4">
+              <div className='bg-sky-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-32 flex items-center justify-center'>
+                <Link href="/" className="">Main page</Link>
+              </div>
+              <div className="bg-sky-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-32 flex items-center justify-center">
+                <Link href={'/catalog'}>Catalog</Link>
+              </div>
+              <div className="bg-sky-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-32 flex items-center justify-center">
+                <Link href={'/contact'}>Contact</Link>
+              </div>
+              <div className="bg-sky-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-32 flex items-center justify-center">
+                <Link href={'/about'}>About</Link>
+              </div>
+            </nav>
+          </div>
         </div>
         <AppBarAuth />
     </header>
